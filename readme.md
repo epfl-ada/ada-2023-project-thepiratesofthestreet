@@ -1,4 +1,4 @@
-# Building and analysis of movie arcs
+# Analysis of fictional worlds through movie summaries
 
 ## Abstract
 
