@@ -1,0 +1,364 @@
+ "Thriller": 0
+ "Science Fiction": 1
+ "Horror": 0
+ "Adventure": 0
+ "Supernatural": 1
+ "Action": 0
+ "Space western": 1
+ "Mystery": 0
+ "Biographical film": -1
+ "Drama": 0
+ "Crime Drama": 0
+ "Crime Fiction": 0
+ "Erotic thriller": 0
+ "Psychological thriller": 0
+ "Short Film": 0
+ "Silent film": 0
+ "Indie": 0
+ "Black-and-white": 0
+ "Comedy": 0
+ "Family Film": 0
+ "Fantasy": 1
+ "World cinema": 0
+ "Musical": 0
+ "Japanese Movies": 0
+ "Action/Adventure": 0
+ "Romantic comedy": 0
+ "Ensemble Film": 0
+ "Comedy-drama": 0
+ "Romantic drama": 0
+ "Romance Film": 0
+ "Costume drama": 0
+ "War film": 0
+ "Epic": 0
+ "Period piece": 0
+ "Film adaptation": 0
+ "Animation": 0
+ "Children's/Family": 0
+ "Children's Fantasy": 1
+None: 0
+ "Future noir": 1
+ "Comedy film": 0
+ "Coming of age": 0
+ "Suspense": 0
+ "Crime Thriller": 0
+ "Black comedy": 0
+ "Bollywood": 0
+ "Marriage Drama": 0
+ "Wuxia": 0
+ "Martial Arts Film": 0
+ "Chinese Movies": 0
+ "Western": 0
+ "Parody": 0
+ "Mockumentary": 0
+ "Fan film": 0
+ "Cult": 0
+ "Adventure Comedy": 0
+ "Slapstick": 0
+ "Biopic [feature]": -1
+ "Historical Epic": 0
+ "Sports": -1
+ "Family Drama": 0
+ "Political drama": 0
+ "Historical fiction": 1
+ "Courtroom Drama": 0
+ "Culture & Society": 0
+ "Biography": -1
+ "Documentary": -1
+ "Christmas movie": 0
+ "Television movie": 0
+ "Malayalam Cinema": 0
+ "Historical drama": 0
+ "Action Comedy": 0
+ "Blaxploitation": 0
+ "Erotica": 0
+ "Sci-Fi Horror": 1
+ "Satire": 0
+ "Epic Western": 0
+ "Gangster Film": 0
+ "Softcore Porn": 0
+ "Sexploitation": 0
+ "B-movie": 0
+ "Zombie Film": 1
+ "Action Thrillers": 0
+ "Musical Drama": 0
+ "Erotic Drama": 0
+ "Pornographic movie": -1
+ "Slasher": 0
+ "Film noir": 0
+ "Social issues": 0
+ "Legal drama": 0
+ "New Hollywood": 0
+ "History": 0
+ "Experimental film": 0
+ "Surrealism": 1
+ "Tragicomedy": 0
+ "Avant-garde": 0
+ "Crime Comedy": 0
+ "Fantasy Comedy": 1
+ "Monster movie": 0
+ "Natural horror films": 0
+ "Creature Film": 0
+ "Gender Issues": 0
+ "LGBT": 0
+ "Music": 0
+ "Comedy of Errors": 0
+ "Political thriller": 0
+ "Melodrama": 0
+ "Americana": 0
+ "Detective fiction": 0
+ "Detective": 0
+ "Concert film": 0
+ "Horror Comedy": 0
+ "Anime": 0
+ "Childhood Drama": 0
+ "Docudrama": -1
+ "Teen": 0
+ "Gothic Film": 0
+ "Disaster": 0
+ "Art film": 0
+ "Domestic Comedy": 0
+ "Musical comedy": 0
+ "Family-Oriented Adventure": 0
+ "Escape Film": 0
+ "Prison": 0
+ "Dance": 0
+ "Superhero movie": 0
+ "Filipino Movies": 0
+ "Filipino": 0
+ "Spy": 0
+ "Combat Films": 0
+ "Fantasy Adventure": 1
+ "Political cinema": 0
+ "Comedy horror": 0
+ "C-Movie": 0
+ "Dystopia": 1
+ "Buddy film": 0
+ "Tragedy": 0
+ "Time travel": 1
+ "Sword and sorcery": 1
+ "Political satire": 0
+ "Gross-out film": 0
+ "Gross out": 0
+ "Doomsday film": 1
+ "Plague": 0
+ "Propaganda film": 0
+ "Screwball comedy": 0
+ "Comedy Western": 0
+ "Gay": 0
+ "Gay Interest": 0
+ "Gay Themed": 0
+ "Film & Television History": -1
+ "Film": 0
+ "Medical fiction": 0
+ "Costume Adventure": 0
+ "Rockumentary": -1
+ "Feminist Film": 0
+ "Educational": 0
+ "Buddy cop": 0
+ "Film \u00e0 clef": 0
+ "Costume Horror": 0
+ "Pre-Code": 0
+ "Juvenile Delinquency Film": 0
+ "Christian film": 0
+ "Natural disaster": 0
+ "Movie serial": 0
+ "Linguistics": 0
+ "Language & Literature": 0
+ "Comedy of manners": 0
+ "Children's": 0
+ "Remake": 0
+ "Media Satire": 0
+ "Computer Animation": 0
+ "Spaghetti Western": 0
+ "Dogme 95": 0
+ "Backstage Musical": 0
+ "Law & Crime": 0
+ "Hybrid Western": 0
+ "Stop motion": 0
+ "Roadshow theatrical release": 0
+ "Sex comedy": 0
+ "Tollywood": 0
+ "Women in prison films": 0
+ "Holiday Film": 0
+ "Heavenly Comedy": 0
+ "Road movie": 0
+ "Giallo": 0
+ "Anthology": 0
+ "Existentialism": 0
+ "Social problem film": 0
+ "Sci-Fi Adventure": 1
+ "Anthropology": 0
+ "Gay pornography": -1
+ "Stoner film": 0
+ "Auto racing": 0
+ "Slice of life story": 0
+ "Kitchen sink realism": 0
+ "British New Wave": 0
+ "Samurai cinema": 0
+ "Heist": 0
+ "Gulf War": 0
+ "Archaeology": 0
+ "Romantic fantasy": 1
+ "Religious Film": 0
+ "Biker Film": 0
+ "Animal Picture": 0
+ "Absurdism": 0
+ "Swashbuckler films": 0
+ "Hagiography": 1
+ "Hardcore pornography": -1
+ "Adult": 0
+ "Animated Musical": 0
+ "Anti-war": 0
+ "Anti-war film": 0
+ "Cavalry Film": 0
+ "Haunted House Film": 0
+ "Space opera": 1
+ "Czechoslovak New Wave": 0
+ "Animals": 0
+ "Addiction Drama": 0
+ "Punk rock": 0
+ "Chase Movie": 0
+ "Tokusatsu": 0
+ "Pornography": -1
+ "Extreme Sports": 0
+ "Superhero": 0
+ "Apocalyptic and post-apocalyptic fiction": 1
+ "Whodunit": 0
+ "Environmental Science": 0
+ "Airplanes and airports": 0
+ "Travel": 0
+ "Alien Film": 1
+ "Graphic & Applied Arts": 0
+ "Animated cartoon": 0
+ "Essay Film": 0
+ "Inspirational Drama": 0
+ "Revisionist Western": 0
+ "Pinku eiga": 0
+ "Stand-up comedy": 0
+ "Jungle Film": 0
+ "Fairy tale": 1
+ "Comedy Thriller": 0
+ "Tamil cinema": 0
+ "Libraries and librarians": 0
+ "Workplace Comedy": 0
+ "Caper story": 0
+ "Demonic child": 0
+ "Illnesses & Disabilities": 0
+ "Expressionism": 0
+ "Glamorized Spy Film": 0
+ "Early Black Cinema": 0
+ "Interpersonal Relationships": 0
+ "British Empire Film": 0
+ "Monster": 1
+ "Sword and sorcery films": 1
+ "B-Western": 0
+ "Bengali Cinema": 0
+ "Filmed Play": 0
+ "Northern": 0
+ "Hip hop movies": 0
+ "Humour": 0
+ "Roadshow/Carny": 0
+ "Exploitation": 0
+ "Sword and Sandal": 0
+ "Nature": 0
+ "Mumblecore": 0
+ "Children's Entertainment": 0
+ "Splatter film": 0
+ "Star vehicle": 0
+ "Business": 0
+ "Mythological Fantasy": 1
+ "Journalism": 0
+ "Camp": 0
+ "Boxing": 0
+ "Mondo film": 0
+ "Latino": 0
+ "Alien invasion": 1
+ "Sponsored film": 0
+ "Revenge": 0
+ "Foreign legion": 0
+ "Historical Documentaries": -1
+ "Heaven-Can-Wait Fantasies": 0
+ "Baseball": -1
+ "Prison film": 0
+ "Conspiracy fiction": 0
+ "Crime": 0
+ "Master Criminal Films": 0
+ "Jukebox musical": 0
+ "Indian Western": 0
+ "Road-Horror": 0
+ "Werewolf fiction": 1
+ "Feature film": 0
+ "Neo-noir": 0
+ "Private military company": 0
+ "Finance & Investing": 0
+ "Computers": 1
+ "Movies About Gladiators": 0
+ "Horse racing": 0
+ "Nuclear warfare": 0
+ "Inventions & Innovations": 0
+ "Instrumental Music": 0
+ "Media Studies": 0
+ "Archives and records": 0
+ "Psycho-biddy": 0
+ "Outlaw biker film": 0
+ "Prison escape": 0
+ "Z movie": 0
+ "News": 0
+ "Beach Film": 0
+ "Live action": 0
+ "Fictional film": 0
+ "Education": 0
+ "Health & Fitness": 0
+ "Film-Opera": 0
+ "Period Horror": 0
+ "Comdedy": 0
+ "Children's Issues": 0
+ "Science fiction Western": 1
+ "Bloopers & Candid Camera": 0
+ "Psychological horror": 0
+ "Albino bias": 0
+ "Family & Personal Relationships": 0
+ "Steampunk": 1
+ "Fantasy Drama": 1
+ "Sci-Fi Thriller": 1
+ "Courtroom Comedy": 0
+ "Operetta": 0
+ "Parkour in popular culture": 0
+ "Cyberpunk": 1
+ "Coming-of-age film": 0
+ "Cold War": 0
+ "Political Documetary": -1
+ "World History": -1
+ "Reboot": 0
+ "Bruceploitation": 0
+ "Ealing Comedies": 0
+ "Silhouette animation": 0
+ "Female buddy film": 0
+ "Race movie": 0
+ "Breakdance": 0
+ "Acid western": 0
+ "War effort": 0
+ "School story": 0
+ "Clay animation": 0
+ "Supermarionation": 0
+ "Sci Fi Pictures original films": 1
+ "Outlaw": 0
+ "Kafkaesque": 1
+ "Vampire movies": 1
+ "Goat gland": 0
+ "Therimin music": 0
+ "Beach Party film": 0
+ "Singing cowboy": 0
+ "Point of view shot": 0
+ "Romantic thriller": 0
+ "Patriotic film": 0
+ "Chick flick": 0
+ "Ninja movie": 0
+ "Buddy Picture": 0
+ "Statutory rape": 0
+ "New Queer Cinema": 0
+ "Neorealism": 0
+ "The Netherlands in World War II": -1
+ "Revisionist Fairy Tale": 1
+ "Homoeroticism": 0
