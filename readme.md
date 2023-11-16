@@ -18,16 +18,16 @@ Interesting :The distinction is further obscured by a philosophical understandin
 
 ## Research questions
 
-A substancial part of our project is to detect speculative fictions.
+This project aims to unravel the evolution of themes and descriptions in speculative fiction based on movie summaries. Questions guiding our research include: How have themes and descriptions in speculative fiction transformed over time? Are there discernible patterns or shifts in dominant themes across decades? As an element of portraylad of fictional worlds, the study also looks at the evolution of a sentiment score. How has the sentiment in fictional stories changed over the same time periods?
 
-Is it possible to detect a speculative fiction from a movie sumary ? 
+Furthermore, crucial underlying questions include the detection of speculative fictions from movie summaries. What are the limitations of relying simply on the mentionned genres ? Can a machine learning model as Naive Bayes accurately discern speculative fiction, especially when it is not the primary genre ? Can it bring more information than simply relying on already mentionned genres ? 
 
+// (keep  ?)
 We have three parameters of interest: time, movie themes and sentiment. By combining these three parameters, we can specify following research questions:
-
 (i) What are the themes of fictional stories? How did they evolve over time?
 (ii) How did the sentiment in fictional stories evolve over time? Are there differences for different periods of history?
 (iii) Are sentiment and themes linked with each other? How is there correlation over time?
-
+//
 
 
 ### Methods
