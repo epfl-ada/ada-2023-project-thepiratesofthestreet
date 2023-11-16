@@ -30,9 +30,6 @@ We have three parameters of interest: time, movie themes and sentiment. By combi
 
 
 
-## Additional datasets
-(?)
-
 ### Methods
 The methodology used to face the research questions is presented in the following pipeline. It encompasses 4 main parts.
 
