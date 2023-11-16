@@ -53,7 +53,7 @@ Statistics : Percentage of film per year by genres
 
 Step 2 : First, genre classification can be biased by people who did it. Then, genre classification may make us miss some speculative movies that are not classified as “obvious” speculative fiction genres. For example, it is not possible to extract the fiction degree of a movie only classified as an “action movie”. 
 
-In this way we use machine learning models to detect speculative fiction from the summary. 
+In this way we use machine learning models to detect speculative fiction from the summary and so extend our fiction data base.  
 Naive-Bayes.  
 
 Step 3 : Early evaluation of the ML classification performance
