@@ -81,7 +81,7 @@ Step 8 : Completing the storyline and creating the website
 
 ### Organization within team
 
-Juan  : Empereurdes(web)site and Sentimental analysis
+Juan  : Website for Blogpost and Sentimental analysis
 
 Cyrill : Sentimental analysis and LDA method
 
