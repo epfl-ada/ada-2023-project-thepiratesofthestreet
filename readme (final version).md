@@ -22,7 +22,7 @@ Non-technical:
 
 ### Methods
 For our analysis, no additional datasets are required.   
-The methodology used to face the research questions is presented in the following pipeline. It encompasses 4 main parts.
+The methodology used to tackle the research questions is presented in the following pipeline. It encompasses 4 main parts.
 
 **Part 1: Taming the Data : genre extraction and overall lookup**
 
