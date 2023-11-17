@@ -34,7 +34,8 @@ The methodology used to face the research questions is presented in the followin
 
 **Part 1: Taming the Data : genre extraction and overall lookup**
 
-Step 1: Data scraping, pre-processing and dataset construction 
+Step 1: Data scraping, pre-processing and dataset construction
+
 As movies are associated with several different genres, we construct a relational table with movies ID and movie genres. 
 Check the number of summaries that have a genre  (.isin)
 
