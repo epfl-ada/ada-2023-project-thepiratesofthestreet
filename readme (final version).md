@@ -1,7 +1,7 @@
 # Analysis of fictional worlds through movie summaries
 
 ## Abstract
-From mythology to science fiction, people have always invented stories. The ability to create fiction (defined by the American heritage dictionary as creative work whose content is imagined and is not on real facts) can even be viewed as characteristic for human race.
+From mythology to science fiction, people have always invented stories. The ability to create fiction (defined by the American heritage dictionary as creative work whose content is imagined and is not based on real facts) can even be viewed as characteristic for human race.
 All types of fiction invite their audience to explore real ideas, issues, or possibilities using an imaginary setting or using something similar to reality, though still distinct from it. In this project, we want to extract movies which fall in the category "speculative fiction" as defined in Wikipedia [1], to destill content of peoples imaginations and their evolution over time.
 
 With the CMU movie summary corpus as the starting point, we first create a subset which exclusively contains speculative fiction. We approach this first step in two ways: We directly inspect the genre of the movies in the dataset and hope to improve the classification quality by training a Naive Bayes model.
@@ -17,17 +17,7 @@ Technical:
 Non-technical:   
 (i) What are the themes of speculative fictional stories? How did they evolve over time?   
 (ii) How did the sentiment in speculative fictional stories evolve over time?   
-(iii) Are sentiment and themes linked with each other?  
-
-### Methods
-The methodology used to face the research questions is presented in the following pipeline. It encompasses 4 main parts.
-
-**Part 1: Taming the Data : genre extraction and overall lookup**
-
-Step 1: Data scraping, pre-processing and dataset construction 
-The data
-As movies are associated with several different genres, we construct a relational table with movies ID and movie genres. 
-Check the number of summaries that have a genre  (.isin)
+(iii) Are sentiment and themes linked with each other?   
 
 
 ### Methods
@@ -76,7 +66,7 @@ Step 5 : We fit an LDA model to the summaries to identify different themes among
 
 Step 6: With the LDA, we obtain groups of words representing themes for each decade. Labelling the different themes can be done manually. We can also measure distances between themes by applying a pretrained Top2Vec model.
 
-Step 7 : We analyze the sentiments of movies over time and compare the results by genres or themes.
+Step 7 : We analyze the sentiments of movies over time and compare the results by themes.
 
 Step 8 : Completing the storyline and creating the website 
 
