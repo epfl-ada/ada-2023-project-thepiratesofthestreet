@@ -18,10 +18,12 @@ Non-technical:
 2. How did the sentiment in speculative fictional stories evolve over time?   
 3. Are sentiment and themes linked with each other?   
 
+## Additional datasets
+
+No additional datasets are required for our analysis.
+Nevertheless, we copied 3 plots from wikipedia and IMDB and saved them as txt files for a quick test of our classifier on recent and popular movies.
 
 ## Methods
-
-NB: For our analysis, no additional datasets are required.  
 
 The methodology used to tackle the research questions is presented in the following pipeline. It encompasses 4 main parts.
 
