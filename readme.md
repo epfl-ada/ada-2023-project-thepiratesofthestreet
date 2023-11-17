@@ -19,18 +19,20 @@ Non-technical:
 (iii) Are sentiment and themes linked with each other?   
 
 
-### Methods
-For our analysis, no additional datasets are required.   
+## Methods
+
+NB : For our analysis, no additional datasets are required.  
+
 The methodology used to tackle the research questions is presented in the following pipeline. It encompasses 4 main parts.
 
-**Part 1: Taming the Data : genre extraction and overall lookup**
+#### **Part 1: Taming the Data : genre extraction and overall lookup**
 
 Step 1: Load CMU movie datasets and use data scraping techniques to gather movie-related information. As movies are associated with several different genres, we construct a relational table with movies ID and movie genres. 
 
 Step 2: To get an idea of the mentioned genres and their importance in the dataset, the count of movies each genre is referring to is visualized in bar plots. And analyze genre distributions by creating cumulative plots based on sorted genre frequencies.
 
 
-**Part 2: Fiction vs Non fiction**
+#### **Part 2: Fiction vs Non fiction**
 
 This part is a necessary bridge from the provided dataset to our sicentific questions by obtaining a set of speculative fictional summaries.
 
@@ -42,7 +44,7 @@ Step 5: Evaluation of the ML classification performance on the early training-te
 
 (later) Step 8 : Improve the ML classification model (features processing, improved training set), word embedding
 
-**Part 3: Extract themes from fiction movies**
+#### **Part 3: Extract themes from fiction movies**
 
 Once a dataset with speculative fiction movies has been created, we want to characterize their stories by focusing on two methods : sentimental analysis and topic modeling.
 
@@ -51,7 +53,7 @@ Step 6 : We apply sentiment analysis on all the summaries of movies from our spe
 Step 7 : We fit an LDA model to the summaries to identify different themes among the movies. This step is repeated for movies of different decades.
 
 
-**Part 4 : Analysis and answering the research questions**
+#### **Part 4 : Analysis and answering the research questions**
 
 Step 9: With the LDA, we obtain groups of words representing themes for each decade. Labelling the different themes can be done manually. We can also measure distances between themes by applying a pretrained Top2Vec model.
 
@@ -59,7 +61,7 @@ Step 10 : We analyze the sentiments of movies over time and compare the results 
 
 Step 11 : Completing the storyline and creating the website 
 
-### Proposed timeline
+## Proposed timeline
 
 04/12 - 10/12 : Finish part 3 and start part 4
 
@@ -67,7 +69,7 @@ Step 11 : Completing the storyline and creating the website
 
 18/12 - 22/12 : Finalize the visualisation and the storyline
 
-### Organization within team
+## Organization within team
 
 Juan  : Website for Blogpost and Sentimental analysis
 
@@ -80,5 +82,5 @@ Raphael : Naive-Bayes, Story line
 Giulia : Storyline, statistics, website and vizualisation
 
 
-#### References
+## References
 [1] https://en.wikipedia.org/wiki/Speculative_fiction
