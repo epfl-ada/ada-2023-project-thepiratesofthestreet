@@ -36,7 +36,7 @@ def plot_top_words(model, feature_names, n_top_words, n_topics, title):
     col_n = min([n_topics, 5])
     
     # Main figure with row_n x col_n subplots 
-    fig, axes = plt.subplots(row_n, col_n, figsize=(20, 10), sharex=True)
+    fig, axes = plt.subplots(row_n, col_n, figsize=(15, 8), sharex=True)
     axes = axes.flatten()
     for topic_idx, topic in enumerate(model.components_):
         # getting words and their weight from topics
