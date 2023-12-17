@@ -17,6 +17,32 @@ from gensim.corpora.dictionary import Dictionary
 from gensim.models.coherencemodel import CoherenceModel
 
 # Define function to show top n keywords for each topic
+def plot_tf_weights(dtm, feature_names, row_index, N = 30):
+    """
+    Plot the words along with their TF-IDF weights for a specific row in a TF-IDF matrix.
+
+    Parameters:
+    - dtm_idf: TF-IDF matrix (scipy.sparse.csr_matrix)
+    - feature_names: List of feature names (words)
+    - row_index: Index of the row to plot
+    """
+    # Get the row (document) 
+    row = dtm[row_index, :].toarray().flatten()
+    # Sort indices in descending order
+    sorted_indices = np.argsort(row)[::-1]  
+
+    # Plot the top N words and their TF-IDF weights
+    top_indices = sorted_indices[:N]
+    top_words = [feature_names[idx] for idx in top_indices]
+    top_weights = row[top_indices]
+
+    plt.figure(figsize=(10, 6))
+    plt.barh(top_words, top_weights)
+    plt.xlabel('TF-IDF Weight')
+    plt.title(f'TF-IDF Weights for Row {row_index}')
+    plt.show()
+    return
+
 def show_topics(vectorizer, lda_model, n_words=10):
     keywords = np.array(vectorizer.get_feature_names_out())
     topic_keywords = []
