@@ -60,9 +60,10 @@ def plot_top_words(model, feature_names, n_top_words, n_topics, title):
     # Get number of rows and columns to plot
     row_n = np.ceil(n_topics/5).astype(int)
     col_n = min([n_topics, 5])
+    h_per_topic = n_top_words*0.25
     
     # Main figure with row_n x col_n subplots 
-    fig, axes = plt.subplots(row_n, col_n, figsize=(15, 8), sharex=True)
+    fig, axes = plt.subplots(row_n, col_n, figsize=(12, h_per_topic*row_n+2), sharex=True)
     axes = axes.flatten()
     for topic_idx, topic in enumerate(model.components_):
         # getting words and their weight from topics
@@ -72,14 +73,15 @@ def plot_top_words(model, feature_names, n_top_words, n_topics, title):
 
         # plot results as horizontal bars
         ax = axes[topic_idx]
-        ax.barh(top_features, weights, height=0.7)
-        ax.set_title(f"Topic {topic_idx +1}", fontdict={"fontsize": 30})
-        ax.tick_params(axis="both", which="major", labelsize=20)
+        ax.barh(top_features, weights, height=0.5)
+        ax.set_title(f"Topic {topic_idx +1}", fontdict={"fontsize": 20})
+        ax.tick_params(axis="both", which="major", labelsize=15)
         for i in "top right left".split():
             ax.spines[i].set_visible(False)
-        fig.suptitle(title, fontsize=40)
+        fig.suptitle(title, fontsize=20)
 
     plt.subplots_adjust(top=0.90, bottom=0.05, wspace=0.90, hspace=0.3)
+    plt.tight_layout()
     plt.show()
 
 
@@ -140,3 +142,30 @@ def get_coherence_by_topic(topic_keyword_id_matrix):
     cm = CoherenceModel(topics=topic_keyword_id_matrix, corpus=bow_corpus, dictionary=dictionary, coherence='u_mass')
     coherence = cm.get_coherence_per_topic()
     return coherence
+
+    
+def plot_grid_search_score(grid_search):
+    # Extract relevant information from cv_results_
+    mean_test_scores = grid_search.cv_results_['mean_test_score']
+    params = grid_search.cv_results_['params']
+
+    # Extract hyperparameter values for plotting
+    alpha_values = [param['doc_topic_prior'] for param in params]
+    beta_values = [param['topic_word_prior'] for param in params]
+
+    # Create a 2D plot
+    plt.figure(figsize=(6, 5))
+
+    # Scatter plot with color representing mean test scores
+    sc = plt.scatter(alpha_values, beta_values, c=mean_test_scores, cmap='viridis', s=100, edgecolors='k', alpha=0.7)
+
+    # Colorbar
+    plt.colorbar(sc, label='Mean Test Score (Negative Log-Likelihood)')
+
+    # Set labels and title
+    plt.xlabel('Doc Topic Prior (alpha)')
+    plt.ylabel('Topic Word Prior (beta)')
+    plt.title('Grid Search Results')
+
+    # Show the plot
+    plt.show()
