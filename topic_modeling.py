@@ -60,7 +60,7 @@ def plot_top_words(model, feature_names, n_top_words, n_topics, title):
     # Get number of rows and columns to plot
     row_n = np.ceil(n_topics/5).astype(int)
     col_n = min([n_topics, 5])
-    h_per_topic = n_top_words*0.25
+    h_per_topic = n_top_words*0.3
     
     # Main figure with row_n x col_n subplots 
     fig, axes = plt.subplots(row_n, col_n, figsize=(12, h_per_topic*row_n+2), sharex=True)
@@ -74,11 +74,11 @@ def plot_top_words(model, feature_names, n_top_words, n_topics, title):
         # plot results as horizontal bars
         ax = axes[topic_idx]
         ax.barh(top_features, weights, height=0.5)
-        ax.set_title(f"Topic {topic_idx +1}", fontdict={"fontsize": 20})
-        ax.tick_params(axis="both", which="major", labelsize=15)
+        ax.set_title(f"Topic {topic_idx +1}", fontdict={"fontsize": 18})
+        ax.tick_params(axis="both", which="major", labelsize=14)
         for i in "top right left".split():
             ax.spines[i].set_visible(False)
-        fig.suptitle(title, fontsize=20)
+        fig.suptitle(title, fontsize=18)
 
     plt.subplots_adjust(top=0.90, bottom=0.05, wspace=0.90, hspace=0.3)
     plt.tight_layout()
