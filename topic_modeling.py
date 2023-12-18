@@ -86,7 +86,9 @@ def plot_top_words(model, feature_names, n_top_words, n_topics, title):
 
 
 def lda_topic_modelling(preprocessed_summaries, n_topics = 15,
-                        n_features = 4000, min_df = 5, max_df = 0.5):
+                        n_features = 4000, min_df = 5, max_df = 0.5,
+                         alpha = 0.1, eta = 0.1, max_iter = 20,
+                           random_state = 7, verbose = 1):
 
     # Vectorize the summaries
     vectorizer = CountVectorizer(max_df=max_df, min_df=min_df, max_features=n_features, stop_words="english")
@@ -97,12 +99,12 @@ def lda_topic_modelling(preprocessed_summaries, n_topics = 15,
     # Create the LatentDirichletAllocation model
     lda = LatentDirichletAllocation(
         n_components=n_topics,
-        doc_topic_prior= 0.05,
-        topic_word_prior= 0.2,
-        learning_method = 'online',
-        max_iter=15,
-        random_state=7,
-        verbose=1
+        doc_topic_prior= alpha,
+        topic_word_prior= eta,
+        learning_method = 'batch',
+        max_iter=max_iter,
+        random_state=random_state,
+        verbose=verbose
     )
     # fit model
     lda.fit(dtm)
