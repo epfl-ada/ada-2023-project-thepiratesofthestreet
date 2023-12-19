@@ -65,16 +65,20 @@ def plot_top_words(model, feature_names, n_top_words, n_topics, title):
     # Main figure with row_n x col_n subplots 
     fig, axes = plt.subplots(row_n, col_n, figsize=(12, h_per_topic*row_n+2), sharex=True)
     axes = axes.flatten()
+    
+    topics_dict={}
+    
     for topic_idx, topic in enumerate(model.components_):
         # getting words and their weight from topics
         top_features_ind = topic.argsort()[-n_top_words:]
         top_features = feature_names[top_features_ind]
         weights = topic[top_features_ind]
-
+        topics_dict[f"topic_{topic_idx}"] = {"features":top_features.tolist(), "weights":weights.tolist()}
+        
         # plot results as horizontal bars
         ax = axes[topic_idx]
         ax.barh(top_features, weights, height=0.5)
-        ax.set_title(f"Topic {topic_idx +1}", fontdict={"fontsize": 18})
+        ax.set_title(f"Topic {topic_idx}", fontdict={"fontsize": 18})
         ax.tick_params(axis="both", which="major", labelsize=14)
         for i in "top right left".split():
             ax.spines[i].set_visible(False)
@@ -83,6 +87,42 @@ def plot_top_words(model, feature_names, n_top_words, n_topics, title):
     plt.subplots_adjust(top=0.90, bottom=0.05, wspace=0.90, hspace=0.3)
     plt.tight_layout()
     plt.show()
+    return topics_dict
+
+def save_top_words_weights(lda_model, vectorizer, n=10, filename='output_data/top_topic_words.csv'):
+    """
+    Save the top n words and their weights for each topic in a CSV file.
+
+    Parameters:
+    - lda_model: The trained LDA model.
+    - vectorizer: The vectorizer used for data transformation.
+    - n: The number of top words to save for each topic.
+    - filename: The name of the CSV file to save the results.
+
+    Returns:
+    None
+    """
+    # Get the feature names from the vectorizer
+    feature_names = vectorizer.get_feature_names_out()
+
+    # Create a MultiIndex for the DataFrame columns
+    columns = pd.MultiIndex.from_product([['Word', 'Weight'], range(0, len(lda_model.components_))], names=[None, 'Rank'])
+
+    # Create a DataFrame to store the results
+    top_words_df = pd.DataFrame(index=range(n), columns=columns)
+    # Iterate through each topic in the LDA model
+    for topic_idx, topic in enumerate(lda_model.components_):
+        # Get the indices of the top n words for the current topic
+        top_features_ind = topic.argsort()[-n:][::-1]
+        top_features = feature_names[top_features_ind]
+        weights = topic[top_features_ind]
+        # Assign the values to the DataFrame
+        top_words_df.loc[:,('Word', topic_idx)] = top_features
+        top_words_df.loc[:,('Weight', topic_idx)] = weights
+
+    # Save the DataFrame to a CSV file
+    top_words_df.to_csv(filename)
+    return top_words_df
 
 
 def lda_topic_modelling(preprocessed_summaries, n_topics = 15,
