@@ -27,6 +27,8 @@ def get_datasets(folderpath = os.path.abspath('MovieSummaries')):
     folder_path = os.path.abspath('MovieSummaries')
 
     df_movies = pd.read_csv(os.path.join(folder_path, "movie.metadata.tsv"), delimiter='\t', names = movie_column_names)
+    df_movies['release_year'] = pd.to_datetime(df_movies['movie_release_date'], format='mixed', errors='coerce').dt.year
+    
     df_summaries = pd.read_csv(os.path.join(folder_path, "plot_summaries.txt"), delimiter='\t', names=['Wikipedia_movie_ID', 'movie_summary'])
         
     return df_movies, df_summaries
@@ -42,9 +44,10 @@ def get_movie_genres_dataframe(df_movies):
     # Iterate over each row and process the genre dictionaries into new rows related to the movie's ID
     for i, genres_dict in enumerate(genres_list):
         movie_id = df_movies.loc[i, 'Wikipedia_movie_ID']
+        release_year = df_movies.loc[i,'release_year']
 
         for genre_id, genre_name in genres_dict.items():
-            new_rows.append({'Wikipedia_movie_ID': movie_id, 'Freebase_genre_ID': genre_id, 'movie_genre': genre_name})
+            new_rows.append({'Wikipedia_movie_ID': movie_id, 'Freebase_genre_ID': genre_id, 'movie_genre': genre_name,'release_year':release_year})
 
     # Create a new DataFrame from the list of rows and save it as csv
     df_genres = pd.DataFrame(new_rows)
