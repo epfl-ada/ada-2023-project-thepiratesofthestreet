@@ -89,7 +89,7 @@ def plot_top_words(model, feature_names, n_top_words, n_topics, title):
     plt.show()
     return topics_dict
 
-def save_top_words_weights(lda_model, vectorizer, n=10, filename='output_data/top_topic_words.csv'):
+def get_top_words_weights(lda_model, vectorizer, n=10, save_csv = True, filename='output_data/topc_words_matrix_test.csv'):
     """
     Save the top n words and their weights for each topic in a CSV file.
 
@@ -121,7 +121,8 @@ def save_top_words_weights(lda_model, vectorizer, n=10, filename='output_data/to
         top_words_df.loc[:,('Weight', topic_idx)] = weights
 
     # Save the DataFrame to a CSV file
-    top_words_df.to_csv(filename)
+    if save_csv:
+        top_words_df.to_csv(filename)
     return top_words_df
 
 
