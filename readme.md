@@ -19,11 +19,7 @@ To satisfy our interest in speculative fictional worlds, the sentiments attached
 
 ## Additional datasets 📊
 
-* [IMDB](https://developer.imdb.com/non-commercial-datasets/)
-At some point we'll have a subset of fictionnal movies, but is it representative of all the fiction pieces released during the last 100 years?
-Several bias can be highlighted. Did we miss many fictional movies by selecting only SF and Fantasy movies? Aren’t there others minor fictional genres? Aren’t there hidden fictional movies, only classified for example as drama or action?
-
-To try to mitigate these biases, the IMDB genres classification comes to the rescue. We select all the movies classified as SF and Fantasy and merged them with the CMU dataset. In this way a larger part of the CMU movies is integrated in our fictional movies’ subset. It now contains all the CMU movies classified as SF and Fantasy by CMU or IMDB!
+* [IMDB](https://developer.imdb.com/non-commercial-datasets/) We used the movie genres classification of the IMDB dataset to extend our fictional movies subset.
 
 
 ## Methods ⚙️
@@ -34,8 +30,8 @@ The methodology used to tackle the research questions is presented in the follow
 
 #### Taming the Data: genre extraction and overall lookup
 * We first loaded the CMU movie datasets and used data handling techniques with pandas to gather movie-related information and get a first genres summaries dataset.
-* Among the 40 most represented genres, science fiction and fantasy were chosen as the only ones clearly associated with fiction: this gives us 6.56% of the whole movies dataset! To reduce all biases we could have with the CMU dataset only, we merge the CMU dataset with the IMDB genres classification.
-
+* Among the 40 most represented genres, science fiction and fantasy were chosen as the only ones clearly associated with fiction: this gives us 6.56% of the whole movies dataset!
+To reduce enrich our fictional movies subset and to retrieve CMU movies that could have been missed with the CMU genres classifiaction, we merge the CMU dataset with the IMDB genres classification. We select all the IMDB movies classified as SF and Fantasy and merged them with the CMU dataset. We still have the same movies set but a larger part of the CMU movies is integrated in our fictional movies’ subset. It now contains all the CMU movies classified as SF and Fantasy by CMU or IMDB (6506 fictional movies corresponding to 7,9 % of the whole movies).
 
 ### **Part 2: Fictional topics**
 
