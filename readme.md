@@ -50,7 +50,7 @@ Several manipulations were performed on the summaries in order to optimize the t
 
 
 #### Topic modeling through time
-
+The goal of this part is to analyse the evolution of fictional topics over the last century
 ##### LDA on time periods 
 To have a better idea of the evolution of topics over time, the first idea was to perform an LDA topic modeling for each defined period. 
 The set of preprocessed fictional summaries is split in the different periods of time. Number of tokens per summary normalization resulting from it is pretty satisfying.
