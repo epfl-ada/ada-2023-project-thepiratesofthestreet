@@ -77,6 +77,12 @@ To focus our analysis, we now define the topics with keywords that we consider t
 As long as one word of a topic appears in a summary, the corresponding movie is considered to belong to this theme. The number of  topics per year can be computed and can be related to the number of fictional releases
 
 ### **Part 3: Sentimental analysis**
+To get a better feeling about the emotional aspect of movies, sentiment analysis was performed on the summaries of the movies. The SpacyTextBlob NLP pipeline was used for this purpose, which is a lexicon based algorithm. Summary length as in number of sentences in the summaries was briefly considered as confounder for the sentiment score but because the distribution of summary length does not change greatly for different periods of times and different topics, the confounder was not further considered.
+
+##### Results
+- The sentiment of fictional movies is below the sentiment of non-fictional movies for all periods in time with a difference of about 0.02.
+- Different topics have different mean sentiment scores ranging from 0 to 0.04. Magic and time travel movies have the highest sentiment score, outer space and robot movies the lowest.
+- Sentiment scores of different topics have different evolutions over time. Due to data scarcity, results of certain topic have big uncertainty.
 
 
 
