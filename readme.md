@@ -9,7 +9,7 @@ With the CMU movie summary corpus as the starting point, the first step is to ge
 
 ## Research questions 🔍
 
-To satisfy our interest in speculative fictional worlds and their evolution over time, we aim to answer the following questions:
+To satisfy our interest in speculative fictional worlds, the sentiments attached to the topics and their evolution over time, we aim to answer the following questions:
 1. What are the topics of speculative fictional stories? How did they evolve over time?   
 2. How did the sentiment in speculative fictional stories evolve over time?   
 3. Are sentiment and topics linked with each other?   
@@ -24,32 +24,42 @@ Several bias can be highlighted. Did we miss many fictional movies by selecting 
 To try to mitigate these biases, the IMDB genres classification comes to the rescue. We select all the movies classified as SF and Fantasy and merged them with the CMU dataset. In this way a larger part of the CMU movies is integrated in our fictional movies’ subset. It now contains all movies classified as SF and Fantasy by both CMU and IMDB!
 
 
-## Methods ❔
+## Methods ⚙️
 
 The methodology used to tackle the research questions is presented in the following pipeline. It encompasses 4 main parts.
 
 ### **Part 1: Taming the Data: Genre Extraction and overall lookup**
 
-data handling with pandas
-preprocessing of the summaries :NLP with spacy
-- tokanization
-- lemmatizatiom
-- entity rrecognitiomn
+* We first loaded the CMU movie datasets and used data handling techniques with pandas to gather movie-related information and get a first fictional summaries dataset.
+* Among the 40 most represented genres, science fiction and fantasy were chosen as the only ones clearly associated with fiction: this gives us 6.56% of the whole movies dataset! To reduce all biases we could have with the CMU dataset only, we merge the CMU dataset with the IMDB genres classification.
+
+
+### **Part 2: Detecting fictional topics**
+
+This part was mainly dedicated to preprocessing of the summaries using NLP with spacy.
+Preprocessing the summaries involves, via tokenization, removing stop words and proper noun and taking only the lemma of each word.
+
+To detect fictional topics, we used a Latent Dirichlet allocation (LDA) on movie summaries 
+In LDA method, summaries are bags of words and each topic is a probability distribution over words.
+
+Several manipulations were performed on the summaries in order to optimize the topic detection by keeping the words that carry the most information:
+* Word normalization with lemmatization to gather words with close meanings
+* Stop words removal   
+* Proper nouns removal but keeping locations, events, dates
+* Non weighted words (ie : A word that appears many times in a summary won’t have a bigger weight than one which just appears one time.)
+
+
+#### Topic modeling through time
+To have a better idea of the evolution of topics over time, the first idea was to perform an LDA topic modeling for each defined period. 
+The set of preprocessed fictional summaries is split in the different periods of time. Number of tokens per summary normalization resulting from it is pretty satisfying
 
 
 
-Step 1: Load CMU movie datasets and use data scraping techniques to gather movie-related information. As movies are associated with several different genres, we construct a relational table with movies ID and movie genres. 
+# This part is the previous readme
 
-Step 2: To get an idea of the mentioned genres and their importance in the dataset, the count of movies each genre is referring to is visualized in bar plots. And analyze genre distributions by creating cumulative plots based on sorted genre frequencies.
+#To get a feeling for our dataset, we use the genres indicated in the Dataset to find out about the distribution of movies in different relevant genres.
 
-
-### **Part 2: Fiction vs Non-fiction**
-
-This part is a necessary bridge from the provided dataset to our scientific questions by obtaining a set of speculative fictional summaries.
-
-Step 3: To get a feeling for our dataset, we use the genres indicated in the Dataset to find out about the distribution of movies in different relevant genres.
-
-Step 4: The movies are mostly classified into multiple genres and not all movies are classified in the same amount of genres. Therefore, we can not be sure if e.g. a movie that is only classified as 'action' and 'romance' is not speculative fiction. To tackle this problem, we train a multinomial Naive Bayes model to classify movies into 'speculative fiction' and 'non-fiction' with a training set based on explicit speculative fictional genres and non-fictional genres.
+#Step 4: The movies are mostly classified into multiple genres and not all movies are classified in the same amount of genres. Therefore, we can not be sure if e.g. a movie that is only classified as 'action' and 'romance' is not speculative fiction. To tackle this problem, we train a multinomial Naive Bayes model to classify movies into 'speculative fiction' and 'non-fiction' with a training set based on explicit speculative fictional genres and non-fictional genres.
 
 Step 5: Evaluation of the ML classification performance on the early training-testing dataset with confusion matrices and relevant metrics. 
 
