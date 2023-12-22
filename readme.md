@@ -1,5 +1,7 @@
 # Analysis of fictional worlds through movie summaries
 
+## Find our data story [here](https://giulia0402.github.io/)
+
 ## Abstract 📜
 From mythology to science fiction, people have always invented stories. The ability to create fiction (defined by the American Heritage Dictionary as creative work whose content is imagined and is not based on real facts) can even be viewed as characteristic of the human race.
 All types of fiction invite their audience to explore real ideas, issues, or possibilities using an imaginary setting or using something similar to reality, though still distinct from it. In this project, we want to extract movies that fall in the category "speculative fiction" as defined in Wikipedia [1], to distill the content of people's imaginations and their evolution over time.
@@ -26,18 +28,18 @@ To try to mitigate these biases, the IMDB genres classification comes to the res
 
 ## Methods ⚙️
 
-The methodology used to tackle the research questions is presented in the following pipeline. It encompasses 4 main parts.
+The methodology used to tackle the research questions is presented in the following pipeline. It encompasses 3 main parts.
 
-### **Part 1: Taming the Data: Genre Extraction and overall lookup**
+### **Part 1: Detecting fictional movies**
 
-* We first loaded the CMU movie datasets and used data handling techniques with pandas to gather movie-related information and get a first fictional summaries dataset.
+#### Taming the Data: genre extraction and overall lookup
+* We first loaded the CMU movie datasets and used data handling techniques with pandas to gather movie-related information and get a first genres summaries dataset.
 * Among the 40 most represented genres, science fiction and fantasy were chosen as the only ones clearly associated with fiction: this gives us 6.56% of the whole movies dataset! To reduce all biases we could have with the CMU dataset only, we merge the CMU dataset with the IMDB genres classification.
 
 
 ### **Part 2: Detecting fictional topics**
 
 This part was mainly dedicated to preprocessing of the summaries using NLP with spacy.
-Preprocessing the summaries involves, via tokenization, removing stop words and proper noun and taking only the lemma of each word.
 
 To detect fictional topics, we used a Latent Dirichlet allocation (LDA) on movie summaries 
 In LDA method, summaries are bags of words and each topic is a probability distribution over words.
@@ -51,9 +53,26 @@ Several manipulations were performed on the summaries in order to optimize the t
 
 #### Topic modeling through time
 To have a better idea of the evolution of topics over time, the first idea was to perform an LDA topic modeling for each defined period. 
-The set of preprocessed fictional summaries is split in the different periods of time. Number of tokens per summary normalization resulting from it is pretty satisfying
+The set of preprocessed fictional summaries is split in the different periods of time. Number of tokens per summary normalization resulting from it is pretty satisfying.
+However, returned topics for each period are different and it is tricky to link topics over different periods. 
+LDA topics are not clearly defined and we probably missed some topics, eclipsed by bigger ones. 
 
+To focus our analysis, we now define the topics that we consider to be relevant ourselves:
 
+* Outer 
+* Science	
+* Government	
+* Creatures	
+* Robots	
+* Digital	
+* Magic	
+* War
+* Time 
+* Apocalypse	
+
+As long as one word of a topic appears in a summary, the corresponding movie is considered to belong to this theme.
+
+### **Part 3: Sentimental analysis**
 
 # This part is the previous readme
 
