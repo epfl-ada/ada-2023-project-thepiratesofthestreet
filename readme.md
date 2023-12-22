@@ -59,7 +59,7 @@ LDA topics are not clearly defined and we probably missed some topics, eclipsed 
 
 To focus our analysis, we now define the topics that we consider to be relevant ourselves:
 
-* Outer 
+* Outer space
 * Science	
 * Government	
 * Creatures	
@@ -73,6 +73,7 @@ To focus our analysis, we now define the topics that we consider to be relevant 
 As long as one word of a topic appears in a summary, the corresponding movie is considered to belong to this theme.
 
 ### **Part 3: Sentimental analysis**
+
 
 # This part is the previous readme
 
